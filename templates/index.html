@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Pass Generator</title>
+</head>
+<body>
+    {% include "navbar.html" %}
+    <div class="alert alert-success" role="alert">
+        Welcome to PassGenrator
+        <a href="https://mustafapinjari.netlify.app/" class="alert-link">Developer</a>.Protofolio.
+    </div>
+
+    <div class="container">
+        <div class="passgen-container">
+            <h2>Pass Generator</h2>
+            <div class="passgen-wrapper">
+                <div class="passgen-input-box">
+                    <input type="text" disabled>
+                    <span class="material-symbols-rounded">&#xF759</span>
+                </div>
+                <div class="passgen-indicator"></div>
+                <div class="passgen-length">
+                    <div class="passgen-details">
+                        <label class="passgen-title">Password Length</label>
+                        <span></span>
+                    </div>
+                    <input type="range" min="1" max="30" value="15" step="1">
+                </div>
+                <div class="passgen-settings">
+                    <label class="passgen-title">Pass Settings</label>
+                    <ul class="passgen-options">
+                        <li class="passgen-option">
+                            <input type="checkbox" id="passgen-lowercase" checked>
+                            <label for="passgen-lowercase">Lowercase (a-z)</label>
+                        </li>
+                        <li class="passgen-option">
+                            <input type="checkbox" id="passgen-uppercase">
+                            <label for="passgen-uppercase">Uppercase (A-Z)</label>
+                        </li>
+                        <li class="passgen-option">
+                            <input type="checkbox" id="passgen-numbers">
+                            <label for="passgen-numbers">Numbers (0-9)</label>
+                        </li>
+                        <li class="passgen-option">
+                            <input type="checkbox" id="passgen-symbols">
+                            <label for="passgen-symbols">Symbols (!-$^+)</label>
+                        </li>
+                        <li class="passgen-option">
+                            <input type="checkbox" id="passgen-exc-duplicate">
+                            <label for="passgen-exc-duplicate">Exclude Duplicate</label>
+                        </li>
+                        <li class="passgen-option">
+                            <input type="checkbox" id="passgen-spaces">
+                            <label for="passgen-spaces">Include Spaces</label>
+                        </li>
+                    </ul>
+                </div>
+                <button class="passgen-generate-btn">Generate Password</button>
+            </div>
+        </div>
+    </div>
+    
+    <br><br>
+    {% include "footer.html" %}
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+
+
+/* for about us */
+.cropped-img {
+  width: 300px;  /* Set the desired width */
+  height: 250px; /* Set the desired height */
+  object-fit: cover; /* Crop the image */
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Skills */
+
+/* Container for the skill items */
+.skills-content {
+  display: flex;
+  padding: 10px 0; /* Add some padding for better visual appearance */
+  margin: -20px; /* Adjust margin to remove horizontal scroll bar from parent */
+  overflow: scroll; /* Allow both horizontal and vertical scrolling */
+  scroll-snap-type: x mandatory; /* Enable snap scrolling */
+  -ms-overflow-style: none;  /* Hide scrollbar for Internet Explorer and Edge */
+  scrollbar-width: none;  /* Hide scrollbar for Firefox */
+}
+
+/* Hide scrollbar for WebKit browsers */
+.skills-content::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual skill item styles */
+.skill-item {
+  flex: 0 0 auto; /* Prevent flex items from shrinking or growing */
+  scroll-snap-align: start; /* Snap items to the start of the container */
+  margin-right: 16px; /* Space between items */
+  text-align: center; /* Center the text below the image */
+}
+
+/* Optional: Styling for skill item images */
+.skill-logo {
+  max-width: 100px; /* Adjust size of the logos */
+  height: auto;
+  display: block;
+  margin: 0 auto 8px; /* Center the image and add margin below */
+}
+
+/* Optional: Additional styling for better visual appearance */
+.skill-item span {
+  display: block;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Optional: Container with hidden scrollbars */
+.hide-scrollbar {
+  overflow: hidden; /* Hide scrollbars */
+  width: 1200px;  /* Specific width */
+  max-height: 400px; /* Add a max-height to demonstrate scrolling */
+}
+
+.hide-scrollbar .skills-content {
+  overflow: auto; /* Allows both horizontal and vertical scrolling */
+  padding-bottom: 17px; /* Maintain padding to avoid content cut-off */
+  padding-right: 17px; /* Maintain padding to avoid content cut-off */
+}
+
+.passgen-container {
+  width: 450px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.passgen-container h2 {
+  font-weight: 600;
+  font-size: 1.31rem;
+  padding: 1rem 1.75rem;
+  border-bottom: 1px solid #d4dbe5;
+}
+
+.passgen-wrapper {
+  margin: 1.25rem 1.75rem;
+}
+
+.passgen-wrapper .passgen-input-box {
+  position: relative;
+}
+
+.passgen-input-box input {
+  width: 100%;
+  height: 53px;
+  color: #000;
+  background: none;
+  font-size: 1.06rem;
+  font-weight: 500;
+  border-radius: 4px;
+  letter-spacing: 1.4px;
+  border: 1px solid #aaa;
+  padding: 0 2.85rem 0 1rem;
+}
+
+.passgen-input-box span {
+  position: absolute;
+  right: 13px;
+  cursor: pointer;
+  line-height: 53px;
+  color: #707070;
+}
+
+.passgen-input-box span:hover {
+  color: #43A047 !important;
+}
+
+.passgen-wrapper .passgen-indicator {
+  width: 100%;
+  height: 4px;
+  position: relative;
+  margin-top: 0.75rem;
+  border-radius: 25px;
+}
+
+.passgen-indicator::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 50%;
+  border-radius: inherit;
+  transition: width 0.3s ease;
+}
+
+.passgen-indicator#passgen-weak::before {
+  width: 20%;
+  background: #e64a4a;
+}
+
+.passgen-indicator#passgen-medium::before {
+  width: 50%;
+  background: #f1c80b;
+}
+
+.passgen-indicator#passgen-strong::before {
+  width: 100%;
+  background: #43A047;
+}
+
+.passgen-wrapper .passgen-length {
+  margin: 1.56rem 0 1.25rem;
+}
+
+.passgen-length .passgen-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.passgen-length input {
+  width: 100%;
+  height: 5px;
+}
+
+.passgen-settings .passgen-options {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.passgen-settings .passgen-options .passgen-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  width: calc(100% / 2);
+}
+
+.passgen-options .passgen-option:first-child {
+  pointer-events: none;
+}
+
+.passgen-options .passgen-option:first-child input {
+  opacity: 0.7;
+}
+
+.passgen-options .passgen-option input {
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+}
+
+.passgen-options .passgen-option label {
+  cursor: pointer;
+  color: #4f4f4f;
+  padding-left: 0.63rem;
+}
+
+.passgen-wrapper .passgen-generate-btn {
+  width: 100%;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #43A047;
+  font-size: 1.06rem;
+  padding: 0.94rem 0;
+  border-radius: 5px;
+  text-transform: uppercase;
+  margin: 0.94rem 0 1.3rem;
+}

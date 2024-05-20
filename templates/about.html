@@ -1,0 +1,40 @@
+{% include "navbar.html" %}
+{% load static %}
+<link rel="stylesheet" href= "/static/css/style.css">
+    {% comment %} Add About ME {% endcomment %}
+    <!-- About 1 - Bootstrap Brain Component -->
+<section class="py-3 py-md-5 d-flex align-items-center justify-content-center">
+  <div class="container">
+    <div class="row gy-5 gy-md-8 gy-lg-0 align-items-lg-center">
+      <div class="col-12 col-lg-6 col-xl-2">
+        <img class="img-fluid rounded cropped-img" loading="lazy" src="/static/images/developer.jpg" alt="About 1">
+      </div>
+      <div class="col-12 col-lg-6 col-xl-7">
+        <div class="row justify-content-xl-center">
+          <div class="col-12 col-xl-11">
+            <h2 class="mb-3">Who am I?</h2>
+            <p class="mb-5">🚀 About Me:
+
+              Hi there! I'm Mustafa Pinjari, a Frontend Developer passionate about creating exceptional user experiences. With 4+ years of experience, I excel in HTML, CSS, JavaScript, Python, and Data Analysis. I thrive in collaborative environments, pay attention to detail, and stay updated with industry trends. Eager to contribute to innovative projects and add value to your team!
+              
+              </p>
+            <a href="https://www.instagram.com/its_ur_musuuu" class="me-4 text-reset" >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/mustafa-pinjari-287625256" class="me-4 text-reset" >
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/MustafaPinjari" class="me-4 text-reset" >
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+
+  {% include "skills.html" %}
+    <!-- Footer -->
+{% include "footer.html" %}

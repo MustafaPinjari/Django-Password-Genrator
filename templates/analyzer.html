@@ -1,0 +1,35 @@
+{% include "navbar.html" %}
+<div class="container">
+  <h1 align="center">Welcome to Text Master</h1>
+  <div class="alert alert-success" role="alert">
+    Your Text After Transformations
+  </div>
+
+  <div class="card" style="width: 18rem">
+    <div class="card-body">
+      <h5 class="card-title">Number of letters:</h5>
+      <p class="card-text">{{ length }}</p>
+      {% if transformations %}
+      <ul>
+        {% for transformation in transformations %}
+        <li>{{ transformation }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %} {% if length %}
+      <p><strong></strong></p>
+      {% endif %}
+    </div>
+
+    <div class="card-body">
+      <h5 class="card-title">Original Text:</h5>
+      <p class="card-text">{{ original_text }}</p>
+    </div>
+
+    <div class="card-body">
+      <h5 class="card-title">Transformed Text:</h5>
+      <p class="card-text">{{ analyzed_text }}</p>
+    </div>
+  </div>
+  <br />
+</div>
+{% include "footer.html" %}
